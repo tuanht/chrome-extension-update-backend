@@ -1,0 +1,29 @@
+{
+    "name": "im-tracker-backend",
+    "description": "Backend for iTracker browser plugin",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "~4.0.0",
+        "body-parser": "~1.0.1",
+        "morgan": "~1.2.2",
+        "debug": "~0.7.4",
+        "mongoose": "~3.8.13",
+        "URIjs": "~1.13.2",
+        "dateformat": "*",
+        "cli-color": "~0.3.2",
+        "xmlbuilder": "~2.4.3",
+        "jsdom": "~1.0.3"
+    },
+    "engines": {
+        "node": ">= 0.10.25",
+        "npm": ">= 1.0.0"
+    },
+    "private": true,
+    "main": "server.js",
+    "scripts": {
+        "stage": "PORT=3000 node server.js",
+        "dev": "DEBUG=*.js IM_ENVIRONMENT=dev PORT=3000 node --debug server.js",
+        "dev-supervisor": "DEBUG=*.js IM_ENVIRONMENT=dev PORT=3000 supervisor --debug server.js",
+        "prod": "IM_ENVIRONMENT=prod PORT=80 node server.js"
+    }
+}
